@@ -30,6 +30,10 @@ urlpatterns = i18n_patterns(
     path('schema/swagger_ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
     path('', views.index),
+    path('product/get/', views.get_products),
+    path('product/get/tag/', views.get_tag_products),
+    path('product/get/seller/', views.get_sellers_products),
+    path('product/get/search/', views.get_search_products),
 )
 
 if settings.DEBUG:
